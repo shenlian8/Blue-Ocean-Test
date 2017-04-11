@@ -8,7 +8,7 @@ pipeline {
             build 'UI - Smoke/DAC - Desktop'
             
           },
-          "error": {
+          "Thanks page 002": {
             build 'Smoke test - Thank page - Firefox - DDSTF002'
             
           }
