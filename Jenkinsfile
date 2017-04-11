@@ -15,5 +15,10 @@ pipeline {
         )
       }
     }
+    stage('Input') {
+      steps {
+        input(message: 'm', id: 'i', ok: 'ok', submitter: 's', submitterParameter: 'p')
+      }
+    }
   }
 }
