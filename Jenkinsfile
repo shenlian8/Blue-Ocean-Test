@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('DAC Desktop') {
+    stage('1. Stage') {
       steps {
         parallel(
           "DAC Desktop": {
