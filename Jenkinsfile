@@ -1,29 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('1') {
+    stage('DAC Desktop') {
       steps {
         parallel(
-          "1": {
-            echo 'Hallo World'
-            echo 'Hallo 2'
+          "DAC Desktop": {
+            build 'DAC - Desktop'
             
           },
-          "1.1": {
-            echo 'Hallo 1.1'
+          "": {
+            build 'Smoke test - Thank page - Firefox - DDSTF002'
             
           }
         )
       }
     }
-    stage('2') {
-      steps {
-        echo 'Hallo Step 2'
-      }
-    }
-  }
-  environment {
-    a = 'a'
-    b = 'b'
   }
 }
